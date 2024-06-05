@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sir Zyx's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,700,1,200" />
+</head>
+
+<body>
+    <header>
+        <h1>SIR ZYX'S PORTFOLIO</h1>
+        <div class="socials">
+            <a href="https://x.com/zyxofficially"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="https://discord.com/users/856303696829087754"><i class="fab fa-discord"></i> Discord</a>
+            <a href="https://github.com/SirZyxx"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+    </header>
+
+    <section class="services">
+        <div class="content">
+            <div class="service-item">
+                <h2>What I Can't Do</h2>
+                <div class="task">
+                    <img src="assets/car.png">
+                    <div class="task-content">
+                        <h3>Vehicles</h3>
+                        <p>I don't like making <em>Vehicles</em>.</p>
+                    </div>
+                </div>
+
+                <div class="task">
+                    <img src="assets/sfx.png">
+                    <div class="task-content">
+                        <h3>Anything Non-Scripting Related</h3>
+                        <p>I don't like making things that <em>aren't related to Scripting</em> such as but not limited
+                            to SFX, VFX, GFX, with some exceptions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="service-item">
+                <h2>What I Can Do</h2>
+                <div class="task">
+                    <img src="assets/storage.png">
+                    <div class="task-content">
+                        <h3>Datastore</h3>
+                        <p>I can create optimized and easy to manage <em>Datastores</em> which will store and retrieve
+                            data in Roblox games.</p>
+                    </div>
+                </div>
+
+                <div class="task">
+                    <img src="assets/placement.png">
+                    <div class="task-content">
+                        <h3>Placement System</h3>
+                        <p>I can create a <em>Placement System</em> which would allow you to place objects you insert
+                            onto parts or terrain.</p>
+                    </div>
+                </div>
+
+                <div class="task">
+                    <img src="assets/egg.png">
+                    <div class="task-content">
+                        <h3>Simulators</h3>
+                        <p>I can build high-quality <em>Simulators</em> with unique mechanics and features which will
+                            outmatch competitors and also make gamepasses for them.</p>
+                    </div>
+                </div>
+
+                <div class="task">
+                    <img src="assets/pets.png">
+                    <div class="task-content">
+                        <h3>Pet System</h3>
+                        <p>I can create a <em>Pet System</em> which includes but isn't limited to Opening Eggs,
+                            Inventory System, And having the pets follow your character.</p>
+                    </div>
+                </div>
+
+                <div class="task">
+                    <img src="assets/ui.png">
+                    <div class="task-content">
+                        <h3>UI Effects</h3>
+                        <p>Using advanced tweening, or other methods, I can create smooth <em>UI Effects</em> that will
+                            advance your games UI.</p>
+                    </div>
+                </div>
+
+                <div class="task">
+                    <img src="assets/dance.png">
+                    <div class="task-content">
+                        <h3>Player Emotes</h3>
+                        <p>I can create a custom <em>Emote System</em> seperated from Roblox's default emote system
+                            which supports your own custom animations.</p>
+                    </div>
+                </div>
+
+                <div class="task">
+                    <img src="assets/weapon.png">
+                    <div class="task-content">
+                        <h3>Weapon System</h3>
+                        <p>I can create a <em>Weapon System</em> for any type of weapon based on the style you want.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="project-item">
+            <video src="assets/file.mp4" autoplay muted loop></video>
+            <div class="overlay">
+                <h3><em>Modular Placement System</em></h3>
+                <p>I made this <em>Placement System</em> as a commission.
+                    <br>It is described as <em>Modular</em>, because you can insert <em>Any Model</em> inside of it and the system will
+                    create it's own hitbox unless one is provided.
+                    <br>It works on terrain, and parts, and allows for placement inside of other objects as long as
+                    they're not colliding.
+                </p>
+            </div>
+        </div>
+        <div class="project-item">
+            <video src="assets/proj2.mp4" autoplay muted loop></video>
+            <div class="overlay">
+                <h3><em>Outfit Wheel</em></h3>
+                <p>I made an <em>Outfit Wheel</em> for a military game as a commission. Players with a high ranking could assign<br>
+                clothing to other players. I used simple math to determine which part of the wheel you were clicking.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="payment">
+        <div class="content">
+            <h2>Payment Methods</h2>
+            <ul>
+                <li>CashApp</li>
+                <li>Robux</li>
+                <li>Sometimes Giftcards</li>
+                <li>Payments through my business website</li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        const items = document.querySelectorAll('.project-item');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                } else {
+                    entry.target.classList.remove('visible');
+                }
+            });
+        }, { threshold: [0.3, 0.5, 0.7] });
+
+        items.forEach(item => {
+            observer.observe(item);
+        });
+
+        window.addEventListener('scroll', function () {
+            const projectItems = document.querySelectorAll('.project-item');
+            projectItems.forEach((item, index) => {
+                const rect = item.getBoundingClientRect();
+                const height = window.innerHeight;
+                if (rect.top >= -50 && rect.top < height + 50) {
+                    const scrollPercentage = (height - rect.top) / height;
+                    const scaleFactor = 1 + scrollPercentage * 0.15;
+                    item.style.transform = `scale(${scaleFactor})`;
+                    item.querySelector('.overlay').style.opacity = scrollPercentage;
+                } else {
+                    item.style.transform = 'scale(1)';
+                    item.querySelector('.overlay').style.opacity = 0;
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>

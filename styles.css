@@ -1,0 +1,197 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+header {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #1c1c1c;
+    border-bottom: 2px solid #333;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 4.5rem;
+    color: #00ff7f;
+    margin: 0;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.socials a {
+    display: flex;
+    align-items: center;
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    background-color: #1c1c1c;
+    border: 2px solid #333;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #f0f0f0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.socials a i {
+    margin-right: 0.5rem;
+}
+
+.socials a:hover {
+    background-color: #00ff7f;
+    color: #121212;
+}
+
+.services, .payment {
+    padding: 5rem 0;
+    position: relative;
+    text-align: center;
+}
+
+.services .content, .payment .content {
+    max-width: 80%;
+    margin: 0 auto;
+    background-color: rgba(28, 28, 28, 0.8);
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.services .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.services .content h2, .payment .content h2 {
+    color: #00ff7f;
+}
+
+.service-item {
+    flex: 1 1 45%;
+    background-color: rgba(41, 41, 41, 0.8);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.task {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.task img {
+    width: 64px;
+    height: 64px;
+    margin-right: 1rem;
+}
+
+.task-content h3 {
+    margin: 0;
+    color: #00ff7f;
+    font-size: 1.5rem;
+}
+
+.task-content p {
+    margin: 0.5rem 0 0;
+    color: #ccc;
+}
+
+.task-content em {
+    margin: 0.5rem 0 0;
+    color: #00ff7f;
+}
+
+.service-item h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    color: #00ff7f;
+}
+
+.service-item ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+
+.project-item {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    border-bottom: 2px solid #333;
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.project-item.visible {
+    opacity: 1;
+}
+
+.project-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.project-item .overlay em {
+    color: #00ff7f;
+
+}
+
+.project-item.visible .overlay {
+    opacity: 1;
+}
+
+.payment ul {
+    list-style: none;
+    padding: 0;
+}
+
+.payment ul li {
+    margin: 0.5rem 0;
+}
